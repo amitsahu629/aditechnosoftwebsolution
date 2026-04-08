@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization Meta Tags -->
+    <meta name="description" content="Aditechnosoft offers affordable, SEO-friendly, and 100% mobile responsive web development solutions for startups and businesses. Get a premium website starting at Rs. 9,999/-.">
+    <meta name="keywords" content="web development, affordable website, web design, Aditechnosoft, SEO friendly website, mobile responsive, business website">
+    <meta name="author" content="Aditechnosoft">
+    <title>Aditechnosoft | Empowering Your Digital Success</title>
+
+    <!-- Favicon -->
+    <link rel="icon" sizes="32x32" href="favicon.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary: #004d66; /* Deep Professional Blue/Teal based on image */
+            --primary-dark: #00334d;
+            --accent: #ff6600; /* Vibrant Orange for High Conversion */
+            --accent-dark: #e65c00;
+            --text-main: #1e2a3a;
+            --bg-light: #f8fbfd;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-main);
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar Customization */
+        .navbar {
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--primary) !important;
+        }
+
+        /* Logo ke liye Oval Shape CSS */
+.oval-logo {
+    height: 50px;
+    border-radius: 50px; /* Ye sharp corners ko round karke oval shape dega */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Thoda sa 3D shadow effect */
+    object-fit: cover;
+}
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--text-main) !important;
+            transition: var(--transition);
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent) !important;
+        }
+
+        /* Language Switcher */
+        .lang-toggle {
+            background: #fff;
+            border: 2px solid var(--primary);
+            border-radius: 30px;
+            overflow: hidden;
+            display: inline-flex;
+            margin-left: 15px;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 5px 15px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--primary);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .lang-btn.active {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #002233 100%);
+            padding: 80px 0 100px;
+            color: white;
+            position: relative;
+        }
+        .hero-title { line-height: 1.2; }
+        .hero-title span { color: var(--accent); }
+        .btn-custom-accent {
+            background-color: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            border-radius: 50px;
+            padding: 14px 32px;
+            transition: var(--transition);
+            border: none;
+            box-shadow: 0 6px 15px rgba(255,102,0,0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-custom-accent:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-2px);
+            color: #fff;
+        }
+        .btn-outline-light-custom {
+            border: 2px solid white;
+            color: white;
+            font-weight: 700;
+            border-radius: 50px;
+            padding: 12px 30px;
+            transition: var(--transition);
+        }
+        .btn-outline-light-custom:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        /* Section Titles */
+        .section-title {
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        .section-subtitle {
+            color: #6c757d;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* Problem & Solution Boxes */
+        .problem-box {
+            background: #fff5f5;
+            border-left: 5px solid #dc3545;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .problem-box i { color: #dc3545; }
+        .solution-box {
+            background: #f0fdf4;
+            border-left: 5px solid #198754;
+            padding: 30px;
+            border-radius: 10px;
+            height: 100%;
+        }
+        .solution-box i { color: #198754; }
+
+        /* Trust Quote */
+        .trust-quote-container {
+            background: linear-gradient(rgba(0, 77, 102, 0.9), rgba(0, 77, 102, 0.9)), url('AdiTechnosoftImg.jpg') center/cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .trust-quote {
+            font-size: 1.8rem;
+            font-style: italic;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        /* Services Grid */
+        .service-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border: 1px solid #eee;
+            height: 100%;
+            text-align: center;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        /* Pricing Cards */
+        .pricing-section { background-color: var(--bg-light); padding: 80px 0; }
+        .pricing-card {
+            border-radius: 20px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+            overflow: hidden;
+            background: #fff;
+        }
+        .pricing-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .pricing-header {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 700;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        .pricing-card.featured {
+            border: 2px solid var(--accent);
+            transform: scale(1.05);
+            z-index: 2;
+        }
+        .pricing-card.featured:hover { transform: scale(1.05) translateY(-8px); }
+        .pricing-amount {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            padding: 25px 0 15px;
+        }
+        .old-price { font-size: 1.2rem; color: #999; text-decoration: line-through; }
+        .gst-text { font-size: 1rem; color: #666; font-weight: normal; }
+        .renewal-badge { background: #fff3e0; color: #b26a00; font-size: 0.8rem; font-weight: 600; border-radius: 20px; padding: 5px 15px; display: inline-block; }
+
+        /* Urgency Section */
+        .urgency-section {
+            background-color: #fff3cd;
+            border: 2px dashed #ffc107;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        /* Projects Section */
+        .project-card {
+            background: white;
+            border-radius: 16px;
+            border: 1px solid #eef2f6;
+            transition: var(--transition);
+            padding: 25px;
+            text-align: center;
+            height: 100%;
+        }
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 20px rgba(0,77,102,0.1);
+        }
+        .project-icon-img { width: 60px; height: 60px; object-fit: contain; margin-bottom: 15px; }
+
+        /* Contact Section */
+        .contact-box {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 20px;
+            height: 100%;
+        }
+        .free-consult-badge {
+            background: #d1e7dd;
+            color: #0f5132;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* Enhanced Footer Visibility */
+footer {
+    background: #001a26;
+    color: #e0e0e0; /* Brighter default text */
+    padding: 60px 0 30px;
+}
+
+footer h4 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+}
+
+/* Add a small accent line under headings for better structure */
+footer h4::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+    margin-top: 10px;
+}
+
+/* Fix for Quick Links visibility */
+footer .footer-link {
+    color: #b0bec5 !important; /* Lighter grey-blue for readability */
+    text-decoration: none;
+    transition: var(--transition);
+    display: block;
+    margin-bottom: 12px;
+}
+
+footer .footer-link:hover {
+    color: var(--accent) !important;
+    padding-left: 5px; /* Subtle interaction hint */
+}
+
+footer .text-muted {
+    color: #a0a0a0 !important; /* Ensuring muted text is still legible */
+}
+        
+        /* Floating Buttons */
+        .floating-buttons { position: fixed; bottom: 20px; right: 20px; z-index: 1030; display: flex; flex-direction: column; gap: 10px; }
+        .float-btn {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            color: white; padding: 12px 20px; border-radius: 50px;
+            text-decoration: none; font-weight: 600; font-size: 0.9rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: var(--transition);
+        }
+        .float-whatsapp { background: #25D366; }
+        .float-btn:hover { transform: scale(1.05); color: white; filter: brightness(1.1); }
+        
+        @media (max-width: 991px) {
+            .pricing-card.featured { transform: none; margin: 15px 0; }
+            .pricing-card.featured:hover { transform: translateY(-8px); }
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+
+    <!-- Navbar -->
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <!-- <img src="img/logo.png" alt="Logo" height="50" class="me-2">  -->
+                
+                <img src="img/logo.png" alt="Logo" class="me-2 oval-logo" onerror="this.style.display='none'"> 
+
+                Adi<span style="color: var(--accent);">Technosoft</span>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link" href="#home"><span class="trn" data-en="Home" data-or="ହୋମ୍">Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services"><span class="trn" data-en="Services" data-or="ସେବା">Services</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing"><span class="trn" data-en="Pricing" data-or="ମୂଲ୍ୟ">Pricing</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects"><span class="trn" data-en="Projects" data-or="ପ୍ରୋଜେକ୍ଟ">Projects</span></a></li>
+                    
+                    <!-- Language Switcher -->
+                    <li class="nav-item mt-3 mt-lg-0">
+                        <div class="lang-toggle">
+                            <button class="lang-btn active" data-lang="en">ENG</button>
+                            <button class="lang-btn" data-lang="or">ଓଡ଼ିଆ</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="badge bg-warning text-dark px-3 py-2 fs-6 mb-3 rounded-pill fw-bold">
+                        <i class="fas fa-gift me-1"></i> <span class="trn" data-en="Free Consultation Available" data-or="ମାଗଣା ପରାମର୍ଶ ଉପଲବ୍ଧ">Free Consultation Available</span>
+                    </span>
+                    <h1 class="display-4 fw-bold hero-title mb-4">
+                        <span class="trn" data-en="Build a Powerful Online Presence for Your Business" data-or="ଆପଣଙ୍କ ବ୍ୟବସାୟ ପାଇଁ ଏକ ଶକ୍ତିଶାଳୀ ଅନଲାଇନ୍ ଉପସ୍ଥିତି ତିଆରି କରନ୍ତୁ">Build a Powerful Online Presence for Your Business</span>
+                    </h1>
+                    <p class="fs-5 mb-4 text-light opacity-75">
+                        <span class="trn" data-en="Get a premium, high-converting website that turns visitors into paying customers. Designed for businesses who want to grow fast & stand out." data-or="ଏକ ପ୍ରିମିୟମ୍ ୱେବସାଇଟ୍ ପାଆନ୍ତୁ ଯାହା ଭିଜିଟରମାନଙ୍କୁ ଗ୍ରାହକରେ ପରିଣତ କରେ | ବ୍ୟବସାୟ ବୃଦ୍ଧି ପାଇଁ ବିଶେଷ ଭାବରେ ପ୍ରସ୍ତୁତ |">Get a premium, high-converting website that turns visitors into paying customers. Designed for businesses who want to grow fast & stand out.</span>
+                    </p>
+                    <div class="d-flex align-items-center mb-4 text-warning fw-bold fs-5">
+                        <i class="fas fa-arrow-right me-2"></i> 
+                        <span class="trn" data-en="Starting from ₹4,999" data-or="ମାତ୍ର ₹4,999 ରୁ ଆରମ୍ଭ">Starting from ₹4,999</span>
+                    </div>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contact" class="btn btn-custom-accent">
+                            <i class="fas fa-rocket"></i> <span class="trn" data-en="Get My Website Now" data-or="ଏବେ ମୋର ୱେବସାଇଟ୍ ପାଆନ୍ତୁ">Get My Website Now</span>
+                        </a>
+                        <a href="tel:+919958958838" class="btn btn-outline-light-custom">
+                            <i class="fas fa-phone-alt me-2"></i> <span class="trn" data-en="Book Free Call" data-or="ମାଗଣା କଲ୍ ବୁକ୍ କରନ୍ତୁ">Book Free Call</span>
+                        </a>
+                    </div>
+                    <div class="mt-4 pt-2">
+                        <p class="fst-italic small text-info mb-0">
+                            🔥 <span class="trn" data-en="Your website works 24/7 — even when you don’t." data-or="ଆପଣଙ୍କ ୱେବସାଇଟ୍ ୨୪/୭ କାମ କରେ — ଯେତେବେଳେ ଆପଣ ଶୋଇଥାନ୍ତି ବି |">Your website works 24/7 — even when you don’t.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <!-- Main Hero Image injected here -->
+                    <img src="img/AdiTechnosoftImg.png" alt="Adi Technosoft Digital Solutions" class="img-fluid rounded-4 shadow-lg border border-3 border-light">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2 & 3. PROBLEM + SOLUTION HOOK -->
+    <section class="py-5" style="background-color: var(--bg-light);">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="problem-box h-100 shadow-sm">
+                        <h3 class="fw-bold mb-4 text-danger"><span class="trn" data-en="Is your business invisible online?" data-or="କ’ଣ ଆପଣଙ୍କ ବ୍ୟବସାୟ ଅନଲାଇନରେ ଦେଖାଯାଉନାହିଁ କି?">Is your business invisible online?</span></h3>
+                        <ul class="list-unstyled fs-5">
+                            <li class="mb-3"><i class="fas fa-times-circle me-2"></i> <span class="trn" data-en="Kya aap competitors se peeche reh rahe ho?" data-or="କ’ଣ ଆପଣ ନିଜ ପ୍ରତିଯୋଗୀମାନଙ୍କଠାରୁ ପଛରେ ରହିଯାଉଛନ୍ତି?">Kya aap competitors se peeche reh rahe ho?</span></li>
+                            <li class="mb-3"><i class="fas fa-times-circle me-2"></i> <span class="trn" data-en="Kya customers aapko Google par nahi dhoond pa rahe?" data-or="କ’ଣ ଗ୍ରାହକମାନେ ଆପଣଙ୍କୁ ଗୁଗୁଲରେ ଖୋଜି ପାରୁନାହାଁନ୍ତି?">Kya customers aapko Google par nahi dhoond pa rahe?</span></li>
+                        </ul>
+                        <div class="mt-4 fw-bold p-3 bg-white rounded border border-danger text-dark">
+                            👉 <span class="trn" data-en="Aaj ke digital world me website ke bina business incomplete hai." data-or="ଆଜିର ଡିଜିଟାଲ୍ ଯୁଗରେ ୱେବସାଇଟ୍ ବିନା ବ୍ୟବସାୟ ଅସମ୍ପୂର୍ଣ୍ଣ |">Aaj ke digital world me website ke bina business incomplete hai.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="solution-box shadow-sm">
+                        <h3 class="fw-bold mb-4 text-success"><span class="trn" data-en="The Solution You Need" data-or="ଆପଣଙ୍କର ଆବଶ୍ୟକୀୟ ସମାଧାନ">The Solution You Need</span></h3>
+                        <p class="fs-5 fw-medium text-dark mb-4">
+                            <span class="trn" data-en="We create modern, fast & conversion-focused websites jo sirf achhi nahi dikhti — sales generate karti hain." data-or="ଆମେ ଆଧୁନିକ ଏବଂ ଦ୍ରୁତ ୱେବସାଇଟ୍ ତିଆରି କରୁ ଯାହା କେବଳ ଭଲ ଦେଖାଯାଏ ନାହିଁ, ବରଂ ସେଲ୍ସ ମଧ୍ୟ ବଢାଏ |">We create modern, fast & conversion-focused websites jo sirf achhi nahi dikhti — sales generate karti hain.</span>
+                        </p>
+                        <div class="row fs-6 fw-bold">
+                            <div class="col-sm-6 mb-3"><i class="fas fa-check-circle me-2"></i> <span class="trn" data-en="Mobile Responsive" data-or="ମୋବାଇଲ୍ ରେସପନ୍ସିଭ୍">Mobile Responsive</span></div>
+                            <div class="col-sm-6 mb-3"><i class="fas fa-check-circle me-2"></i> <span class="trn" data-en="SEO Optimized" data-or="ଏସଇଓ (SEO) ଅପ୍ଟିମାଇଜ୍ଡ">SEO Optimized</span></div>
+                            <div class="col-sm-6 mb-3"><i class="fas fa-check-circle me-2"></i> <span class="trn" data-en="Fast Loading" data-or="ଫାଷ୍ଟ ଲୋଡିଂ">Fast Loading</span></div>
+                            <div class="col-sm-6 mb-3"><i class="fas fa-check-circle me-2"></i> <span class="trn" data-en="Lead Generating Design" data-or="ଲିଡ୍ ଜେନେରେଟିଂ ଡିଜାଇନ୍">Lead Generating Design</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 & 5. WHY CHOOSE US & SERVICES -->
+    <section id="services" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="section-title"><span class="trn" data-en="Our Premium Services" data-or="ଆମର ପ୍ରିମିୟମ୍ ସେବା">Our Premium Services</span></h2>
+                <p class="section-subtitle"><span class="trn" data-en="Custom Design | Business-Focused Strategy | 24/7 Support | Trusted by Growing Businesses" data-or="କଷ୍ଟମ୍ ଡିଜାଇନ୍ | ବ୍ୟବସାୟ-କେନ୍ଦ୍ରିକ ରଣନୀତି | ୨୪/୭ ସପୋର୍ଟ | ବଢୁଥିବା ବ୍ୟବସାୟ ଦ୍ୱାରା ବିଶ୍ୱାସଯୋଗ୍ୟ">Custom Design | Business-Focused Strategy | 24/7 Support | Trusted by Growing Businesses</span></p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="service-card">
+                        <i class="fas fa-laptop-code service-icon"></i>
+                        <h6 class="fw-bold"><span class="trn" data-en="Business Website" data-or="ବ୍ୟବସାୟିକ ୱେବସାଇଟ୍">Business Website</span></h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="service-card">
+                        <i class="fas fa-shopping-cart service-icon"></i>
+                        <h6 class="fw-bold"><span class="trn" data-en="E-commerce Website" data-or="ଇ-କମର୍ସ ୱେବସାଇଟ୍">E-commerce Website</span></h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="service-card">
+                        <i class="fas fa-pager service-icon"></i>
+                        <h6 class="fw-bold"><span class="trn" data-en="Landing Page Design" data-or="ଲ୍ୟାଣ୍ଡିଂ ପେଜ୍">Landing Page Design</span></h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="service-card">
+                        <i class="fas fa-sync-alt service-icon"></i>
+                        <h6 class="fw-bold"><span class="trn" data-en="Website Redesign" data-or="ୱେବସାଇଟ୍ ରି-ଡିଜାଇନ୍">Website Redesign</span></h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="service-card">
+                        <i class="fas fa-search-dollar service-icon"></i>
+                        <h6 class="fw-bold"><span class="trn" data-en="SEO Optimization" data-or="ଏସଇଓ ସର୍ଭିସ୍">SEO Optimization</span></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. RESULTS SECTION -->
+    <section class="py-5 text-white" style="background-color: var(--primary-dark);">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-3 text-warning"><span class="trn" data-en="Results That Matter" data-or="ଫଳାଫଳ ଯାହା ମହତ୍ତ୍ୱପୂର୍ଣ୍ଣ">Results That Matter</span></h2>
+                    <p class="fs-5"><span class="trn" data-en="Our websites are strategically built to help you:" data-or="ଆମର ୱେବସାଇଟ୍ ଗୁଡିକ ଆପଣଙ୍କୁ ସାହାଯ୍ୟ କରିବା ପାଇଁ ପ୍ରସ୍ତୁତ:">Our websites are strategically built to help you:</span></p>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="bg-white text-dark p-3 rounded shadow fw-bold d-flex align-items-center gap-3">
+                                <i class="fas fa-bullseye text-primary fs-3"></i> 
+                                <span class="trn" data-en="Get more leads" data-or="ଅଧିକ ଲିଡ୍ ପାଇବାକୁ">Get more leads</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="bg-white text-dark p-3 rounded shadow fw-bold d-flex align-items-center gap-3">
+                                <i class="fas fa-chart-line text-primary fs-3"></i> 
+                                <span class="trn" data-en="Increase sales" data-or="ସେଲ୍ସ ବଢାଇବାକୁ">Increase sales</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="bg-white text-dark p-3 rounded shadow fw-bold d-flex align-items-center gap-3">
+                                <i class="fas fa-shield-alt text-primary fs-3"></i> 
+                                <span class="trn" data-en="Build strong brand trust" data-or="ବ୍ରାଣ୍ଡ ଉପରେ ବିଶ୍ୱାସ ବଢାଇବାକୁ">Build strong brand trust</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="bg-white text-dark p-3 rounded shadow fw-bold d-flex align-items-center gap-3">
+                                <i class="fas fa-users text-primary fs-3"></i> 
+                                <span class="trn" data-en="Convert visitors into customers" data-or="ଭିଜିଟରମାନଙ୍କୁ ଗ୍ରାହକରେ ପରିଣତ କରିବାକୁ">Convert visitors into customers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CLIENT TRUST LINE -->
+    <section class="trust-quote-container">
+        <div class="container">
+            <i class="fas fa-quote-left text-warning mb-3" style="font-size: 3rem;"></i>
+            <p class="trust-quote">
+                <span class="trn" data-en="Professional website is not an expense, it's an investment in your business growth." data-or="ପ୍ରଫେସନାଲ୍ ୱେବସାଇଟ୍ ଏକ ଖର୍ଚ୍ଚ ନୁହେଁ, ଏହା ଆପଣଙ୍କ ବ୍ୟବସାୟିକ ଅଭିବୃଦ୍ଧି ପାଇଁ ଏକ ବିନିଯୋଗ |">Professional website is not an expense, it's an investment in your business growth.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- 8. PRICING POSITIONING -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title"><span class="trn" data-en="Premium Pricing Positioning" data-or="ମୂଲ୍ୟ ନିର୍ଦ୍ଧାରଣ">Premium Pricing Positioning</span></h2>
+                <p class="section-subtitle"><span class="trn" data-en="Custom pricing available based on your specific business needs." data-or="ଆପଣଙ୍କ ଆବଶ୍ୟକତା ଅନୁଯାୟୀ କଷ୍ଟମ୍ ମୂଲ୍ୟ ଉପଲବ୍ଧ |">Custom pricing available based on your specific business needs.</span></p>
+            </div>
+            <div class="row g-4 justify-content-center align-items-center">
+                <!-- Basic Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card h-100 shadow-sm">
+                        <div class="pricing-header"><span class="trn" data-en="BASIC PLAN" data-or="ବେସିକ୍ ପ୍ଲାନ୍">BASIC PLAN</span></div>
+                        <div class="pricing-amount text-primary">
+                            <span class="old-price">₹8,999</span><br>₹4,999 <span class="gst-text">(+18% GST)</span>
+                        </div>
+                        <div class="px-4 pb-4 text-center">
+                            <span class="renewal-badge mb-3">Annual Renewal: ₹2,999/-</span>
+                            <ul class="list-unstyled text-start mb-4 text-muted">
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="1 - 4 Pages Dynamic Website" data-or="୧ ରୁ ୪ ପୃଷ୍ଠାର ଡାଇନାମିକ୍ ୱେବସାଇଟ୍">1 - 4 Pages Dynamic Website</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="1 Year Free Domain (.in/.co.in)" data-or="୧ ବର୍ଷର ମାଗଣା ଡୋମେନ୍">1 Year Free Domain (.in/.co.in)</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="1 Year Free Hosting (Unlimited)" data-or="୧ ବର୍ଷର ମାଗଣା ହୋଷ୍ଟିଂ">1 Year Free Hosting (Unlimited)</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="2 Business Webmails" data-or="୨ଟି ବିଜିନେସ୍ ୱେବମେଲ୍">2 Business Webmails</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="Free SSL Certificate" data-or="ମାଗଣା SSL ସାର୍ଟିଫିକେଟ୍">Free SSL Certificate</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="WhatsApp & Call Integration" data-or="ହ୍ୱାଟ୍ସଆପ୍ ଏବଂ କଲ୍ ଇଣ୍ଟିଗ୍ରେସନ୍">WhatsApp & Call Integration</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="Live Chat & Social Media Integration" data-or="ଲାଇଭ୍ ଚାଟ୍ ଏବଂ ସୋସିଆଲ୍ ମିଡିଆ">Live Chat & Social Media Integration</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="1 Enquiry Form" data-or="୧ଟି ଅନୁସନ୍ଧାନ ଫର୍ମ">1 Enquiry Form</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="SEO-Friendly Setup" data-or="ଏସଇଓ ଫ୍ରେଣ୍ଡଲି ସେଟଅପ୍">SEO-Friendly Setup</span></li>
+                                <li class="py-2"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="1 Year Technical Support" data-or="୧ ବର୍ଷର ବୈଷୟିକ ସହାୟତା">1 Year Technical Support</span></li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-primary w-100 fw-bold"><span class="trn" data-en="Choose Plan" data-or="ପ୍ଲାନ୍ ବାଛନ୍ତୁ">Choose Plan</span></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Standard Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card featured h-100 shadow">
+                        <div class="pricing-header" style="background-color: var(--accent); color: #fff;">
+                            <i class="fas fa-star text-warning me-1"></i> <span class="trn" data-en="STANDARD PLAN" data-or="ଷ୍ଟାଣ୍ଡାର୍ଡ ପ୍ଲାନ୍">STANDARD PLAN</span>
+                        </div>
+                        <div class="pricing-amount">
+                            <span class="old-price">₹15,999</span><br>₹7,999 <span class="gst-text">(+18% GST)</span>
+                        </div>
+                        <div class="px-4 pb-4 text-center">
+                            <span class="renewal-badge mb-3">Annual Renewal: ₹2,999/-</span>
+                            <ul class="list-unstyled text-start mb-4 fw-medium">
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="8 Pages Dynamic Website" data-or="୮ ପୃଷ୍ଠାର ଡାଇନାମିକ୍ ୱେବସାଇଟ୍">8 Pages Dynamic Website</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="Admin Access (CMS)" data-or="ଆଡମିନ୍ ଆକ୍ସେସ୍ (CMS)">Admin Access (CMS)</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="5 Business Webmails" data-or="୫ଟି ବିଜିନେସ୍ ୱେବମେଲ୍">5 Business Webmails</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="Payment Gateway Integration" data-or="ପେମେଣ୍ଟ ଗେଟୱେ ଇଣ୍ଟିଗ୍ରେସନ୍">Payment Gateway Integration</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="Google Analytics Setup" data-or="ଗୁଗୁଲ୍ ଆନାଲିଟିକ୍ସ ସେଟଅପ୍">Google Analytics Setup</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="Google Search Console Setup" data-or="ଗୁଗୁଲ୍ ସର୍ଚ୍ଚ କନସୋଲ୍">Google Search Console Setup</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="WhatsApp & Call Integration" data-or="ହ୍ୱାଟ୍ସଆପ୍ ଏବଂ କଲ୍ ଇଣ୍ଟିଗ୍ରେସନ୍">WhatsApp & Call Integration</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="1 Year Free Domain & Hosting" data-or="୧ ବର୍ଷ ମାଗଣା ଡୋମେନ୍ ଓ ହୋଷ୍ଟିଂ">1 Year Free Domain & Hosting</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="SEO & Social Integration" data-or="ଏସଇଓ ଏବଂ ସୋସିଆଲ୍ ଇଣ୍ଟିଗ୍ରେସନ୍">SEO & Social Integration</span></li>
+                                <li class="py-2"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="1 Year Technical Support" data-or="୧ ବର୍ଷର ବୈଷୟିକ ସହାୟତା">1 Year Technical Support</span></li>
+                            </ul>
+                            <a href="#contact" class="btn btn-custom-accent w-100 text-center justify-content-center"><span class="trn" data-en="Get Started" data-or="ଆରମ୍ଭ କରନ୍ତୁ">Get Started</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card h-100 shadow-sm">
+                        <div class="pricing-header" style="background: #1e2a3a;"><span class="trn" data-en="PREMIUM PLAN" data-or="ପ୍ରିମିୟମ୍ ପ୍ଲାନ୍">PREMIUM PLAN</span></div>
+                        <div class="pricing-amount text-primary">
+                            <span class="old-price">₹19,999</span><br>₹10,999 <span class="gst-text">(+18% GST)</span>
+                        </div>
+                        <div class="px-4 pb-4 text-center">
+                            <span class="renewal-badge mb-3">Annual Renewal: ₹2,999/-</span>
+                            <ul class="list-unstyled text-start mb-4 text-muted">
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="12 Pages Dynamic Website" data-or="୧୨ ପୃଷ୍ଠାର ଡାଇନାମିକ୍ ୱେବସାଇଟ୍">12 Pages Dynamic Website</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="Full Admin Access" data-or="ସମ୍ପୂର୍ଣ୍ଣ ଆଡମିନ୍ ଆକ୍ସେସ୍">Full Admin Access</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="5 Business Webmails" data-or="୫ଟି ବିଜିନେସ୍ ୱେବମେଲ୍">5 Business Webmails</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="Payment Gateway Integration" data-or="ପେମେଣ୍ଟ ଗେଟୱେ ଇଣ୍ଟିଗ୍ରେସନ୍">Payment Gateway Integration</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="Google Analytics & Search Console" data-or="ଗୁଗୁଲ୍ ଆନାଲିଟିକ୍ସ ଓ ସର୍ଚ୍ଚ କନସୋଲ୍">Google Analytics & Search Console</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="1 Year Free Domain & Hosting" data-or="୧ ବର୍ଷ ମାଗଣା ଡୋମେନ୍ ଓ ହୋଷ୍ଟିଂ">1 Year Free Domain & Hosting</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="WhatsApp, Call & Live Chat" data-or="ହ୍ୱାଟ୍ସଆପ୍, କଲ୍ ଏବଂ ଲାଇଭ୍ ଚାଟ୍">WhatsApp, Call & Live Chat</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="Advanced SEO Optimization" data-or="ଆଡଭାନ୍ସଡ୍ ଏସଇଓ ଅପ୍ଟିମାଇଜେସନ୍">Advanced SEO Optimization</span></li>
+                                <li class="py-2 border-bottom"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="1 Year Priority Support" data-or="୧ ବର୍ଷର ପ୍ରାଥମିକତା ସହାୟତା">1 Year Priority Support</span></li>
+                                <li class="py-2"><i class="fas fa-check text-success me-2"></i> <span class="trn" data-en="Free SSL Certificate" data-or="ମାଗଣା SSL ସାର୍ଟିଫିକେଟ୍">Free SSL Certificate</span></li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-dark w-100 fw-bold"><span class="trn" data-en="Contact Us" data-or="ଯୋଗାଯୋଗ କରନ୍ତୁ">Contact Us</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. URGENCY & CTA -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="urgency-section shadow-sm mx-auto" style="max-width: 800px;">
+                <h3 class="fw-bold text-danger mb-3">⚡ <span class="trn" data-en="Limited Slots Available This Month" data-or="ଏହି ମାସରେ ସୀମିତ ସ୍ଲଟ୍ ଉପଲବ୍ଧ">Limited Slots Available This Month</span></h3>
+                <p class="fs-5 mb-4 text-dark"><span class="trn" data-en="Book your project now before slots fill up. Don’t lose customers to competitors — go online today." data-or="ସ୍ଲଟ୍ ପୂରଣ ହେବା ପୂର୍ବରୁ ଆପଣଙ୍କର ପ୍ରୋଜେକ୍ଟ ବୁକ୍ କରନ୍ତୁ | ପ୍ରତିଯୋଗୀମାନଙ୍କୁ ନିଜ ଗ୍ରାହକ ହରାନ୍ତୁ ନାହିଁ - ଆଜି ହିଁ ଅନଲାଇନ୍ ଆସନ୍ତୁ |">Book your project now before slots fill up. Don’t lose customers to competitors — go online today.</span></p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="#contact" class="btn btn-custom-accent"><span class="trn" data-en="Get Started" data-or="ଆରମ୍ଭ କରନ୍ତୁ">Get Started</span></a>
+                    <a href="https://wa.me/919958958838" target="_blank" class="btn btn-success fw-bold px-4 rounded-pill d-flex align-items-center">
+                        <i class="fab fa-whatsapp fs-5 me-2"></i> <span class="trn" data-en="Talk on WhatsApp" data-or="ହ୍ୱାଟ୍ସଆପ୍ ରେ କଥା ହୁଅନ୍ତୁ">Talk on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION (Real Time Icons Restored) -->
+    <section id="projects" class="py-5" style="background-color: var(--bg-light);">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="section-title"><span class="trn" data-en="OUR PORTFOLIO" data-or="ଆମର ପୋର୍ଟଫୋଲିଓ">OUR PORTFOLIO</span></h2>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Using actual image tags provided in earlier reference for real-time project icons -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <img src="img/IAC.png" alt="Innometrics" class="project-icon-img" onerror="this.src='favicon.png'">
+                        <h5 class="fw-bold">Innometrics Automation</h5>
+                        <p class="text-muted small mb-3">Industrial IoT Solutions</p>
+                        <a href="https://innometricsautomation.com/" target="_blank" class="text-primary fw-bold text-decoration-none">View Live Site <i class="fas fa-external-link-alt ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <img src="img/Solar%20Project.png" alt="Vidyut Shakti" class="project-icon-img" onerror="this.src='favicon.png'">
+                        <h5 class="fw-bold">VIDYUT SHAKTI</h5>
+                        <p class="text-muted small mb-3">PM Surya Ghar Yojana</p>
+                        <a href="https://amitsahu629.github.io/vidyutshakti/" target="_blank" class="text-primary fw-bold text-decoration-none">View Live Site <i class="fas fa-external-link-alt ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="icon-box d-flex align-items-center justify-content-center rounded-circle mx-auto mb-3" style="width:60px; height:60px; background:#e0f0f0; color:var(--primary); font-size:1.5rem;"><i class="fas fa-dumbbell"></i></div>
+                        <h5 class="fw-bold">Fitnesso Zone</h5>
+                        <p class="text-muted small mb-3">Gym/Body Building Website</p>
+                        <a href="https://amitsahu629.github.io/Fitnesszone//" target="_blank" class="text-primary fw-bold text-decoration-none">View Live Site <i class="fas fa-external-link-alt ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="icon-box d-flex align-items-center justify-content-center rounded-circle mx-auto mb-3" style="width:60px; height:60px; background:#e0f0f0; color:var(--primary); font-size:1.5rem;"><i class="fas fa-shopping-basket"></i></div>
+                        <h5 class="fw-bold">E-Commerce Store</h5>
+                        <p class="text-muted small mb-3">Online Delivery Portal</p>
+                        <a href="#" class="text-primary fw-bold text-decoration-none">View Live Site <i class="fas fa-external-link-alt ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION (Final Trust Close & Form) -->
+    <section id="contact" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="section-title"><span class="trn" data-en="GET IN TOUCH" data-or="ଯୋଗାଯୋଗ କରନ୍ତୁ">GET IN TOUCH</span></h2>
+                <div class="d-flex justify-content-center gap-4 text-success fw-bold flex-wrap mt-3">
+                    <span><i class="fas fa-check-circle"></i> <span class="trn" data-en="100% Satisfaction Guarantee" data-or="୧୦୦% ସନ୍ତୁଷ୍ଟି ଗ୍ୟାରେଣ୍ଟି">100% Satisfaction Guarantee</span></span>
+                    <span><i class="fas fa-check-circle"></i> <span class="trn" data-en="On-Time Delivery" data-or="ଠିକ୍ ସମୟରେ ବିତରଣ">On-Time Delivery</span></span>
+                    <span><i class="fas fa-check-circle"></i> <span class="trn" data-en="Dedicated Support" data-or="ସମର୍ପିତ ସମର୍ଥନ">Dedicated Support</span></span>
+                </div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Form Area -->
+                <div class="col-lg-7">
+                    <div class="contact-box shadow">
+                        <div class="free-consult-badge">
+                            <i class="fas fa-handshake me-1"></i> <span class="trn" data-en="Free Consultation Available" data-or="ମାଗଣା ପରାମର୍ଶ ଉପଲବ୍ଧ">Free Consultation Available</span>
+                        </div>
+                        <h4 class="mb-4 text-primary fw-bold"><span class="trn" data-en="Request for a Call Back" data-or="କଲ୍ ବ୍ୟାକ୍ ପାଇଁ ଅନୁରୋଧ କରନ୍ତୁ">Request for a Call Back</span></h4>
+                        
+                        <form action="https://formspree.io/f/mwvwzbbd" method="POST" id="contactForm" class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-lg" name="Name" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control form-control-lg" name="Phone" placeholder="Mobile Number" required pattern="[0-9]{10}">
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select form-select-lg" name="Service" required>
+                                        <option value="" disabled selected>Select Requirement</option>
+                                        <option value="Basic Plan">Basic Plan (₹4,999)</option>
+                                        <option value="Standard Plan">Standard Plan (₹7,999)</option>
+                                        <option value="Premium Plan">Premium Plan (₹10,999)</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Custom Math Captcha -->
+                                <div class="col-12">
+                                    <label id="captchaQuestion" class="form-label fw-bold text-muted"></label>
+                                    <input type="number" class="form-control form-control-lg" id="captchaInput" placeholder="Enter the sum" required>
+                                    <div class="invalid-feedback" id="captchaError">Incorrect math answer. Please try again.</div>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn-custom-accent w-100 justify-content-center py-3 fs-5 border-0">
+                                        <span class="trn" data-en="SUBMIT REQUEST" data-or="ଦାଖଲ କରନ୍ତୁ">SUBMIT REQUEST</span> <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Info Area -->
+                <div class="col-lg-4">
+                    <div class="contact-box shadow-sm" style="background: var(--primary); color: white;">
+                        <h4 class="fw-bold mb-4 border-bottom pb-3 border-secondary">Contact Info</h4>
+                        
+                        <div class="d-flex mb-4">
+                            <i class="fas fa-phone-alt fs-4 text-warning me-3 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold text-white mb-1">Call Us</h6>
+                                <a href="tel:+919958958838" class="text-light text-decoration-none fs-5">+91 99589 58838</a>
+                                 <div><a href="tel:+917008959963" class="text-light text-decoration-none fs-5">+91 7008959963</a></div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <i class="fab fa-whatsapp fs-3 text-warning me-3 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold text-white mb-1">WhatsApp</h6>
+                                <a href="https://wa.me/919958958838" target="_blank" class="text-light text-decoration-none">Chat with us instantly</a>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <i class="fas fa-map-marker-alt fs-4 text-warning me-3 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold text-white mb-1">Office Main Branch</h6>
+                                <p class="text-light mb-0 small">Signature Global Proxima, Sector 89, Gurugram, Haryana - 122505</p>
+                            </div>
+                        </div>
+
+                         <div class="d-flex mb-4">
+                            <i class="fas fa-map-marker-alt fs-4 text-warning me-3 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold text-white mb-1">Office Branch</h6>
+                                <p class="text-light mb-0 small">Attabira, Bargarh, Odisha - 768027</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5 text-center">
+                            <p class="fst-italic text-warning small mb-0">
+                                "Turn visitors into customers with a smart website."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+    <div class="container">
+        <div class="row g-4 text-center text-md-start">
+            <div class="col-lg-4 col-md-6">
+                <a href="#">
+                    <img src="img/logo.png" alt="Logo" class="me-2 oval-logo" onerror="this.style.display='none'"> 
+                <h4 class="fw-bold">Adi<span style="color:var(--accent);">Technosoft</span></h4>
+                </a>
+                <p class="trn" data-en="Empowering Your Digital Success with high-converting, custom-designed websites tailored for growth." 
+                   data-or="ଅଭିବୃଦ୍ଧି ପାଇଁ ପ୍ରସ୍ତୁତ କଷ୍ଟମ୍-ଡିଜାଇନ୍ ହୋଇଥିବା ୱେବସାଇଟ୍ ସହିତ ଆପଣଙ୍କ ଡିଜିଟାଲ୍ ସଫଳତାକୁ ସଶକ୍ତ କରୁଛି |">
+                   Empowering Your Digital Success with high-converting, custom-designed websites tailored for growth.
+                </p>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <h4>Quick Links</h4>
+                <a href="#home" class="footer-link">Home</a>
+                <a href="#services" class="footer-link">Services</a>
+                <a href="#pricing" class="footer-link">Pricing</a>
+                <a href="#projects" class="footer-link">Portfolio</a>
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+                <h4>Follow Us</h4>
+                <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-3">
+                    <a href="#" class="text-white bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width:40px; height:40px; transition: 0.3s;" onmouseover="this.style.background='var(--accent)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width:40px; height:40px; transition: 0.3s;" onmouseover="this.style.background='var(--accent)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width:40px; height:40px; transition: 0.3s;" onmouseover="this.style.background='var(--accent)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-top border-secondary mt-5 pt-3 text-center text-muted small">
+            <p class="mb-0">&copy; 2026 Aditechnosoft. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/919958958838?text=Hello%20Aditechnosoft,%20I%20want%20to%20build%20a%20website" target="_blank" class="float-btn float-whatsapp">
+            <i class="fab fa-whatsapp fs-5"></i> <span>WhatsApp Us</span>
+        </a>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Language Switcher Logic ---
+            const langBtns = document.querySelectorAll('.lang-btn');
+            const translatableElements = document.querySelectorAll('.trn');
+
+            function setLanguage(lang) {
+                translatableElements.forEach(el => {
+                    const translatedText = el.getAttribute('data-' + lang);
+                    if (translatedText) {
+                        el.textContent = translatedText;
+                    }
+                });
+                
+                langBtns.forEach(btn => btn.classList.remove('active'));
+                document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
+            }
+
+            langBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    setLanguage(btn.getAttribute('data-lang'));
+                });
+            });
+
+            // --- Mobile Menu Auto-Close ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const menuToggle = document.getElementById('navbarNav');
+            const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
+            
+            navLinks.forEach((l) => {
+                l.addEventListener('click', () => {
+                    if (menuToggle.classList.contains('show')) {
+                        bsCollapse.toggle();
+                    }
+                });
+            });
+
+            // --- Math Captcha Validation ---
+            let num1 = Math.floor(Math.random() * 10) + 1;
+            let num2 = Math.floor(Math.random() * 10) + 1;
+            let captchaTotal = num1 + num2;
+            
+            document.getElementById('captchaQuestion').innerText = `Math Captcha: What is ${num1} + ${num2}?`;
+
+            const form = document.getElementById('contactForm');
+            const captchaInput = document.getElementById('captchaInput');
+
+            form.addEventListener('submit', function (event) {
+                captchaInput.setCustomValidity('');
+
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+
+                if (parseInt(captchaInput.value) !== captchaTotal) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    captchaInput.setCustomValidity('Invalid');
+                    document.getElementById('captchaError').style.display = 'block';
+                } else {
+                    document.getElementById('captchaError').style.display = 'none';
+                    captchaInput.setCustomValidity('');
+                }
+
+                form.classList.add('was-validated');
+            }, false);
+        });
+    </script>
+</body>
+</html>
