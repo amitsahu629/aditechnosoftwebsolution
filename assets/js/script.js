@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
             'pricing.html': 'a[href="pricing.html"]',
             'projects.html': 'a[href="projects.html"]',
             'contact.html': 'a[href="contact.html"]',
-            'about.html': 'a[href="about.html"]'
+            'about.html': 'a[href="about.html"]',
+            'career.html': 'a[href="career.html"]'
         };
 
         document.querySelectorAll('.navbar-nav .nav-link')
@@ -151,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let exitShown = false;
 
     document.addEventListener("mouseout", function (e) {
-        if (!exitShown && e.clientY < 10) {
+        if (!exitShown && e.clientY < 0) {
             exitShown = true;
             showThankYouPopup("Wait! Get your website at just ₹4999 🚀");
         }
